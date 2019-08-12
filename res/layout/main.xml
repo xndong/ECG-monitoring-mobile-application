@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background = "#6F6F91"
+    >
+    <TextView
+	android:id="@+id/txt_filestatus" 
+	android:textColor="#00ff00"
+	android:textSize="15dip"
+	android:layout_centerHorizontal="true"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:textStyle="normal"
+    android:visibility = "gone"
+    />
+	<TextView
+	android:id="@+id/txt_btstatus" 
+	android:layout_below="@id/txt_filestatus"
+	android:textColor="#00ff00"
+	android:textSize="15dip"
+	android:layout_centerHorizontal="true"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:textStyle="normal"
+    />
+    <LinearLayout
+    android:id="@+id/linearlayout_info_user"
+    android:layout_below="@id/txt_btstatus"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    	<TextView 
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:textSize="25px"
+    	android:text="当前用户："
+    	/>
+    	<TextView 
+    	android:id="@+id/txt_username"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:textSize="25px"
+    	android:textColor="#FF0000"
+    	/>
+    	
+    	
+    </LinearLayout>
+    	<com.hkyudong.ECGsystem.WaveformView 
+    	android:id="@+id/WaveformArea"
+    	android:layout_below="@id/linearlayout_info_user"
+    	android:layout_marginLeft="0pt"
+    	android:layout_height="400px"
+    	android:layout_width="fill_parent"
+    	/>
+     
+    
+   
+  	<LinearLayout
+    android:id="@+id/linearlayout_button_changeScale"
+    android:orientation="horizontal"
+    android:layout_below="@id/WaveformArea"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    	<TextView 
+    	android:text="Y轴伸缩修改："
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="2"
+    	/>
+    	<Button 
+    	android:id="@+id/btn_scale_increase"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:layout_weight="1"
+    	android:text="放大"
+    	/> 
+    	<Button 
+    	android:id="@+id/btn_scale_decrease"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:layout_weight="1"
+    	android:text="缩小"
+    	/>  	
+    </LinearLayout>
+    <LinearLayout
+    android:id="@+id/linearlayout_info_Yshrink"
+    android:orientation="horizontal"
+    android:layout_below="@id/linearlayout_button_changeScale"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    	<TextView 
+    	android:text="缩小倍数："
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	/>
+    	<TextView 
+    	android:id="@+id/txt_Yshrink"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	/>    	
+    </LinearLayout>
+    
+    
+	<LinearLayout
+	android:id="@+id/linearlayout_btAndFileChange"
+	android:layout_below="@id/linearlayout_info_Yshrink"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"	
+	>
+		<Button 
+    	android:id="@+id/button_connect"
+    	android:layout_weight="1"
+      	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="连接设备"
+    	/>
+    	<Button
+    	android:id="@+id/button_closebt"
+    	android:layout_weight="1"
+    	android:layout_width = "fill_parent"
+    	android:layout_height ="wrap_content"
+    	android:text="断开与硬件的连接"
+    	/>    
+    	
+	</LinearLayout>    
+	<LinearLayout
+	android:id="@+id/linearlayout_NET"
+	android:layout_below="@id/linearlayout_btAndFileChange"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"	
+	>
+		<Button
+    	android:id="@+id/button_readfile"
+    	android:layout_weight="1"
+    	android:layout_width = "fill_parent"
+    	android:layout_height ="wrap_content"
+    	android:text="读取本地文件"
+    	/>
+		<Button 
+    	android:id="@+id/button_NET_sendfile"
+    	android:layout_weight="1"
+      	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="上传数据"
+    	/>    
+    	<Button
+    	android:id="@+id/button_NET_getfile"
+    	android:layout_weight="1"
+    	android:layout_width = "fill_parent"
+    	android:layout_height ="wrap_content"
+    	android:text="读取网络数据"
+    	/>
+	</LinearLayout>  
+    
+    
+    
+    <LinearLayout
+    android:id="@+id/linearlayout_Togglebutton_Status"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    	<TextView 
+    	android:text="运行状态修改："
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	/>
+    	<ToggleButton 
+    	android:id="@+id/tbtn_runtoggle"
+    	android:textOn="运行中"
+    	android:textOff="停止"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:layout_weight="1"
+    	/>
+    	
+    </LinearLayout>
+</RelativeLayout>

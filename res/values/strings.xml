@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">心电图显示仪</string>
+    <string name="bluetooth">心电图显示仪</string>
+    <string name="name_pairedListView_device_list">已经配对的蓝牙</string>
+    <string name="name_newDevicesListView_device_list">新搜索的蓝牙</string>
+    <string name="txt_scan_btn">搜索查找设备</string>
+    <string name="scanning">正在搜索蓝牙设备</string>
+    <string name="select_device">请选择设备</string>
+    <string name="none_found">未发现设备</string>
+    <string name="none_paired">没有已经存在的设备</string>
+    
+    
+    <string name="not_connected">未连接蓝牙设备</string>
+    <string name="title_connected_to">已连接到蓝牙</string>
+    <string name="title_connecting">正在连接蓝牙</string>
+    <string name="title_not_connected">未连接蓝牙</string>   
+    <string name="bt_not_enabled_leaving">打开蓝牙失败，请手动打开后再试</string>     
+</resources>
